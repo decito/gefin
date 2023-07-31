@@ -1,0 +1,24 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --r-white-soft: 248 248 248;
+    --r-white-mute: 242 242 242;
+    --r-white-cozy: 235 235 235;
+
+    --r-black: 24 24 24;
+    --r-black-soft: 34 34 34;
+    --r-black-mute: 40 40 40;
+    --r-black-cozy: 84 84 84;
+
+    --r-indigo: 44 62 80;
+    --r-green: 160deg 100% 37%;
+
+    --r-divider-light: 60 60 60;
+    --r-divider-dark: 84 84 84;
+
+    --section-gap: 160;
+  }
+}
