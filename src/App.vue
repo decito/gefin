@@ -2,4 +2,6 @@
   <RouterView />
 
   <AppNav />
+
+  <FloatingButton />
 </template>
