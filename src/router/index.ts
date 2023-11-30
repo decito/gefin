@@ -1,6 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import HelloWorldVue from './components/HelloWorld.vue'
-import DashboardContentVue from './components/dashboard/DashboardContent.vue'
+import HelloWorldVue from '@/views/HelloWorld.vue'
+import DashboardContentVue from '@/components/dashboard/DashboardContent.vue'
 
 const routes = [
   { path: '/', component: HelloWorldVue },

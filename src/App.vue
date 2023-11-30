@@ -1,3 +1,5 @@
 <template>
+  <AppHeader />
+
   <RouterView />
 </template>

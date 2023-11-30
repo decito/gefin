@@ -21,7 +21,7 @@ const data = [
 <template>
   <VisXYContainer height="350px" :margin="{ left: 20, right: 20 }" :data="data">
     <VisStackedBar
-      :x="(d: Data, i: number) => i"
+      :x="(___d: Data, i: number) => i"
       :y="(d: Data) => d.total"
       color="#41b883"
       :rounded-corners="4"
