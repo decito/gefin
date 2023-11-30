@@ -1,13 +1,8 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  darkMode: ['media'],
+  darkMode: ['class'],
 
-  content: [
-    './pages/**/*.{ts,tsx,vue}',
-    './components/**/*.{ts,tsx,vue}',
-    './app/**/*.{ts,tsx,vue}',
-    './src/**/*.{ts,tsx,vue}'
-  ],
+  content: ['./src/**/*.{ts,tsx,vue}', './index.html'],
 
   theme: {
     container: {
@@ -18,6 +13,9 @@ module.exports = {
       }
     },
     extend: {
+      fontFamily: {
+        sans: 'Inter, system-ui, sans-serif'
+      },
       colors: {
         border: 'hsl(var(--border))',
         input: 'hsl(var(--input))',
