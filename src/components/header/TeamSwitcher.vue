@@ -2,6 +2,8 @@
 import { ref } from 'vue'
 import { cn } from '@/lib/utils'
 
+import { CaretSortIcon, CheckIcon, PlusCircledIcon } from '@radix-icons/vue'
+
 const groups = [
   {
     label: 'Personal Account',

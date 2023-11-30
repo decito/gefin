@@ -21,9 +21,6 @@ coverage
 *.sln
 *.sw?
 
-# Auto import files
+# Auto generated files
 auto-imports.d.ts
 components.d.ts
-
-# NPM Packages
-*-lock.*
