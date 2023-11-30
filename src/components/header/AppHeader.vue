@@ -37,7 +37,9 @@ onMounted(() => {
   <div class="border-b">
     <div class="flex h-16 items-center px-4">
       <TeamSwitcher />
+
       <MainNav class="mx-6" />
+
       <div class="ml-auto flex items-center space-x-4">
         <div class="mr-6">
           <SunIcon
@@ -51,7 +53,9 @@ onMounted(() => {
             @click="toggleDarkMode"
           />
         </div>
-        <DashboardSearch />
+
+        <AppSearch />
+
         <UserNav />
       </div>
     </div>
