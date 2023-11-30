@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col">
-    <DashboardContent />
-  </div>
+   <div class="flex flex-col">
+      <DashboardContent />
+   </div>
 </template>

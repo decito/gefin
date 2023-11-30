@@ -5,7 +5,7 @@ import { useFormField } from './useFormField'
 import { cn } from '@/lib/utils'
 
 defineOptions({
-  inheritAttrs: false
+   inheritAttrs: false
 })
 const props = defineProps<LabelProps>()
 
@@ -14,17 +14,17 @@ const { class: className, ...rest } = useAttrs()
 </script>
 
 <template>
-  <Label
-    :class="
-      cn(
-        'block text-left text-sm font-medium tracking-tight text-foreground',
-        error && 'text-destructive',
-        className ?? ''
-      )
-    "
-    :for="formItemId"
-    v-bind="rest"
-  >
-    <slot />
-  </Label>
+   <Label
+      :class="
+         cn(
+            'block text-left text-sm font-medium tracking-tight text-foreground',
+            error && 'text-destructive',
+            className ?? ''
+         )
+      "
+      :for="formItemId"
+      v-bind="rest"
+   >
+      <slot />
+   </Label>
 </template>

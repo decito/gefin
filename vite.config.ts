@@ -6,18 +6,18 @@ import AutoImport from 'unplugin-auto-import/vite'
 import Components from 'unplugin-vue-components/vite'
 
 export default defineConfig({
-  plugins: [
-    vue(),
-    AutoImport({
-      imports: 'vue'
-    }),
-    Components({
-      dts: true
-    })
-  ],
-  resolve: {
-    alias: {
-      '@': path.resolve(__dirname, './src')
-    }
-  }
+   plugins: [
+      vue(),
+      AutoImport({
+         imports: 'vue'
+      }),
+      Components({
+         dts: true
+      })
+   ],
+   resolve: {
+      alias: {
+         '@': path.resolve(__dirname, './src')
+      }
+   }
 })
