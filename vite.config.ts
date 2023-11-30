@@ -11,7 +11,9 @@ export default defineConfig({
     AutoImport({
       imports: 'vue'
     }),
-    Components()
+    Components({
+      dts: true
+    })
   ],
   resolve: {
     alias: {
