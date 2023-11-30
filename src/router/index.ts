@@ -22,6 +22,17 @@ const router = createRouter({
       meta: {
         icon: 'calendar'
       }
+    },
+    {
+      path: '/mvp',
+      name: 'visualização antiga',
+      // route level code-splitting
+      // this generates a separate chunk (About.[hash].js) for this route
+      // which is lazy-loaded when the route is visited.
+      component: () => import('../views/RemoveView.vue'),
+      meta: {
+        icon: 'trash'
+      }
     }
   ]
 })
