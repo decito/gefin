@@ -1,36 +1,11 @@
 <script setup lang="ts">
 import { MoonIcon, SunIcon } from '@radix-icons/vue'
-import { onMounted, ref } from 'vue'
+import { useDarkModeStore } from '@/stores/darkMode'
+import { storeToRefs } from 'pinia'
 
-const isDarkMode = ref(true)
-
-const toggleDarkMode = () => {
-   isDarkMode.value = !isDarkMode.value
-   localStorage.setItem('darkMode', String(isDarkMode.value))
-
-   handleDocumentClass()
-}
-
-const handleDocumentClass = () => {
-   const html = document.documentElement
-   if (isDarkMode.value) html.classList.add('dark')
-   else html.classList.remove('dark')
-}
-
-onMounted(() => {
-   const handler = localStorage.getItem('darkMode')
-   if (handler === null) {
-      isDarkMode.value = true
-   }
-   if (handler === 'true') {
-      isDarkMode.value = true
-   }
-   if (handler === 'false') {
-      isDarkMode.value = false
-   }
-
-   handleDocumentClass()
-})
+const store = useDarkModeStore()
+const { isDark } = storeToRefs(store)
+const { toggleDark } = store
 </script>
 
 <template>
@@ -43,14 +18,14 @@ onMounted(() => {
          <div class="ml-auto flex items-center space-x-4">
             <div class="mr-6">
                <SunIcon
-                  v-if="isDarkMode"
+                  v-if="isDark"
                   class="h-6 w-6 cursor-pointer text-blue-500"
-                  @click="toggleDarkMode"
+                  @click="toggleDark()"
                />
                <MoonIcon
                   v-else
                   class="h-6 w-6 cursor-pointer text-blue-500"
-                  @click="toggleDarkMode"
+                  @click="toggleDark()"
                />
             </div>
 
