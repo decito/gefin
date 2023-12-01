@@ -6,6 +6,12 @@ import { RocketIcon } from '@radix-icons/vue'
 import { toTypedSchema } from '@vee-validate/zod'
 import { z } from 'zod'
 import { useForm } from 'vee-validate'
+import useUserStore from '@/stores/user'
+import { useRouter } from 'vue-router'
+
+const store = useUserStore()
+const { authenticate } = store
+const router = useRouter()
 
 const formSchema = toTypedSchema(
    z.object({
@@ -25,7 +31,8 @@ const onSubmit = form.handleSubmit(values => {
    isLoading.value = true
 
    setTimeout(() => {
-      isLoading.value = false
+      authenticate()
+      router.push({ name: 'dashboard' })
    }, 3000)
 })
 </script>
