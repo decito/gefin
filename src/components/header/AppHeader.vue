@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import { MoonIcon, SunIcon } from '@radix-icons/vue'
-import { useDarkModeStore } from '@/stores/darkMode'
 import { storeToRefs } from 'pinia'
+import useDarkModeStore from '@/stores/darkMode'
 
 const store = useDarkModeStore()
 const { isDark } = storeToRefs(store)
